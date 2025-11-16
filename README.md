@@ -29,7 +29,9 @@ This project implements a comprehensive solution for Chinese handwritten charact
 - See `requirements.txt` for full dependencies
 - 
 ### Reference
+
 https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset
+
 https://github.com/kimanalytics/Handwritten-Digit-Recognition-using-Keras-and-TensorFlow
 
 ### Installation
