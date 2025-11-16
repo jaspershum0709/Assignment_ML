@@ -28,17 +28,45 @@ This project implements a comprehensive solution for Chinese handwritten charact
 - TensorFlow 2.12+
 - See `requirements.txt` for full dependencies
 - 
-### Reference
+
+# 🏗️ Model Architectures
+## Model 1: Regularized CNN (Best Performing)
+3 convolutional layers with batch normalization
+Strong regularization: Dropout (0.2-0.4) + Batch Normalization
+Global Average Pooling for better generalization
+Direct connection to 2,000-class output layer
+Total parameters: ~1.78 million
+
+## Model 2: Simplified CNN
+Streamlined architecture with He normal initialization
+3 convolutional layers (48→96→192 filters)
+Moderate dropout (0.3-0.5)
+Global Average Pooling before classification
+Total parameters: ~2.73 million
+
+## Model 3: Lightweight CNN
+Minimal architecture with L2 regularization
+3 convolutional layers (24→48→96 filters)
+Additional dense layer (128 units) before output
+Aggressive dropout (0.3-0.5)
+Total parameters: ~1.75 million
+
+
+# 📊 Data Augmentation Method
+The project uses TensorFlow's ImageDataGenerator for data augmentation to address limited training samples:
+```bash
+datagen = tf.keras.preprocessing.image.ImageDataGenerator(
+    rotation_range=10,           # ±10 degree rotation
+    width_shift_range=0.1,       # ±10% horizontal shift
+    height_shift_range=0.1,      # ±10% vertical shift
+    shear_range=0.1,             # ±10% shear transformation
+    zoom_range=0.1,              # ±10% zoom
+    fill_mode='constant',        # Fill new pixels with constant value
+    cval=0                       # Fill value = 0 (black)
+)
+`````
+# 🔍 Reference
 
 https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset
 
 https://github.com/kimanalytics/Handwritten-Digit-Recognition-using-Keras-and-TensorFlow
-
-### Installation
-```bash
-# Clone the repository
-git clone https://github.com/jaspershum0709/Assignment_ML.git
-cd DIT5411-Chinese-Character-Recognition
-
-# Install dependencies
-pip install -r requirements.txt
