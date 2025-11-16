@@ -27,11 +27,15 @@ This project implements a comprehensive solution for Chinese handwritten charact
 - Python 3.8+
 - TensorFlow 2.12+
 - See `requirements.txt` for full dependencies
+- 
+### Reference
+https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset
+https://github.com/kimanalytics/Handwritten-Digit-Recognition-using-Keras-and-TensorFlow
 
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/DIT5411-Chinese-Character-Recognition.git
+git clone https://github.com/jaspershum0709/Assignment_ML.git
 cd DIT5411-Chinese-Character-Recognition
 
 # Install dependencies
