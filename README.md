@@ -32,23 +32,35 @@ This project implements a comprehensive solution for Chinese handwritten charact
 # 🏗️ Model Architectures
 ## Model 1: Regularized CNN (Best Performing)
 3 convolutional layers with batch normalization
+
 Strong regularization: Dropout (0.2-0.4) + Batch Normalization
+
 Global Average Pooling for better generalization
+
 Direct connection to 2,000-class output layer
+
 Total parameters: ~1.78 million
 
 ## Model 2: Simplified CNN
 Streamlined architecture with He normal initialization
+
 3 convolutional layers (48→96→192 filters)
+
 Moderate dropout (0.3-0.5)
+
 Global Average Pooling before classification
+
 Total parameters: ~2.73 million
 
 ## Model 3: Lightweight CNN
 Minimal architecture with L2 regularization
+
 3 convolutional layers (24→48→96 filters)
+
 Additional dense layer (128 units) before output
+
 Aggressive dropout (0.3-0.5)
+
 Total parameters: ~1.75 million
 
 
