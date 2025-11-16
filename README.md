@@ -27,7 +27,6 @@ This project implements a comprehensive solution for Chinese handwritten charact
 - Python 3.8+
 - TensorFlow 2.12+
 - See `requirements.txt` for full dependencies
-- 
 
 # 🏗️ Model Architectures
 ## Model 1: Regularized CNN (Best Performing)
